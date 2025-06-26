@@ -1,0 +1,1213 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Screenclass</title>
+
+    <link rel="stylesheet" href="./src/output.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="shortcut icon"
+      href="./public/landing/sc-favicon.jpg"
+      type="image/x-icon"
+    />
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <script src="./src/index.js" defer></script>
+  </head>
+  <body>
+    <section
+      class="intro bg-cover p-10 flex md:flex-col"
+      style="background-image: url('./src/images/bg-header.jpg')"
+    >
+      <header
+        class="header w-full flex justify-between items-center bg-transparent transition-all duration-300 absolute top-0 left-0 px-4 py-2 z-50"
+      >
+        <nav class="flex justify-between w-full">
+          <img
+            id="headerLogo"
+            src="./src/images/screenclass-logo-white.png"
+            alt="screenclass logo"
+            class="w-40 h-auto"
+          />
+
+          <ul
+            class="w-fit hidden lg:flex justify-between text-base font-bold items-center text-white cursor-pointer gap-15"
+          >
+            <li>Home</li>
+            <div class="relative text-left">
+              <div>
+                <li
+                  class="inline-flex w-full gap-x-1.5 text-white"
+                  id="classesBtn"
+                  aria-expanded="true"
+                  aria-haspopup="true"
+                >
+                  Classes
+                  <svg
+                    class="-mr-1 size-5 mt-1 text-white"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    aria-hidden="true"
+                    data-slot="icon"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </li>
+              </div>
+
+              <div
+                id="classesMenu"
+                class="absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black/5 hidden"
+                role="menu"
+                aria-orientation="vertical"
+                aria-labelledby="menu-button"
+                tabindex="-1"
+              >
+                <div class="py-1" role="none">
+                  <!-- Active: "bg-gray-100 text-gray-900 outline-hidden", Not Active: "text-gray-700" -->
+                  <a
+                    href="#"
+                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-300"
+                    role="menuitem"
+                    tabindex="-1"
+                    id="menu-item-0"
+                    >Primary</a
+                  >
+                  <a
+                    href="#"
+                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-300"
+                    role="menuitem"
+                    tabindex="-1"
+                    id="menu-item-1"
+                    >Secondary</a
+                  >
+                  <a
+                    href="#"
+                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-300"
+                    role="menuitem"
+                    tabindex="-1"
+                    id="menu-item-2"
+                    >Pre-Varsity</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <li>Pricing</li>
+            <li>Contact Us</li>
+            <div class="relative text-left">
+              <div>
+                <li
+                  class="inline-flex w-full gap-x-1.5 text-white"
+                  id="menuBtn"
+                  aria-expanded="true"
+                  aria-haspopup="true"
+                >
+                  More
+                  <svg
+                    class="-mr-1 size-5 mt-1 text-white"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    aria-hidden="true"
+                    data-slot="icon"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </li>
+              </div>
+
+              <div
+                id="menuOptions"
+                class="absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black/5 hidden"
+                role="menu"
+                aria-orientation="vertical"
+                aria-labelledby="menu-button"
+                tabindex="-1"
+              >
+                <div class="py-1" role="none">
+                  <a
+                    href="#"
+                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-300"
+                    role="menuitem"
+                    tabindex="-1"
+                    id="menu-item-0"
+                    >About Us</a
+                  >
+                  <a
+                    href="#"
+                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-300"
+                    role="menuitem"
+                    tabindex="-1"
+                    id="menu-item-1"
+                    >FAQs</a
+                  >
+                  <a
+                    href="#"
+                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-300"
+                    role="menuitem"
+                    tabindex="-1"
+                    id="menu-item-2"
+                    >Policy</a
+                  >
+
+                  <a
+                    href="#"
+                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-300"
+                    role="menuitem"
+                    tabindex="-1"
+                    id="menu-item-3"
+                    >Terms & Conditions</a
+                  >
+                </div>
+              </div>
+            </div>
+          </ul>
+
+          <img
+            id="menu-bar"
+            src="./src/images/menu.png"
+            alt=""
+            class="block lg:hidden w-8 h-8 cursor-pointer"
+          />
+
+          <div class="log-in w-60 hidden lg:flex gap-6 justify-between">
+            <button
+              id="sign-up"
+              class="w-30 text-base p-2 border-solid border-orange-300 rounded-full text-white border-1 font-semibold cursor-pointer"
+            >
+              Sign Up
+            </button>
+
+            <div class="relative text-left">
+              <div>
+                <button
+                  type="button"
+                  class="w-30 text-base flex h-fit py-3 justify-center gap-2 items-center bg-orange-400 rounded-2xl text-white cursor-pointer font-semibold"
+                  id="loginBtn"
+                  aria-expanded="true"
+                  aria-haspopup="true"
+                >
+                  Login
+                  <svg
+                    class="-mr-1 size-5 mt-1 text-white"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    aria-hidden="true"
+                    data-slot="icon"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </button>
+              </div>
+
+              <div
+                id="loginOptions"
+                class="absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black/5 hidden"
+                role="menu"
+                aria-orientation="vertical"
+                aria-labelledby="menu-button"
+                tabindex="-1"
+              >
+                <div class="py-1" role="none">
+                  <!-- Active: "bg-gray-100 text-gray-900 outline-hidden", Not Active: "text-gray-700" -->
+                  <a
+                    href="#"
+                    class="block px-4 py-2 text-sm text-gray-700"
+                    role="menuitem"
+                    tabindex="-1"
+                    id="menu-item-0"
+                    >Student</a
+                  >
+                  <a
+                    href="#"
+                    class="block px-4 py-2 text-sm text-gray-700"
+                    role="menuitem"
+                    tabindex="-1"
+                    id="menu-item-1"
+                    >Guardian</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </header>
+
+      <div
+        class="hero-section mt-20 flex flex-col md:flex-row justify-between items-center w-full gap-10"
+      >
+        <div
+          class="hero-info text-white font-bold max-w-xl"
+          data-aos="fade-right"
+          data-aos-duration="1000"
+        >
+          <p class="text-4xl md:text-5xl lg:text-6xl leading-tight">
+            Entertaining <br />
+            <span class="text-2xl">approach to</span> Learning!
+          </p>
+          <p class="mt-6 text-lg md:text-xl font-semibold">
+            Quality Basic Education skillfully delivered
+          </p>
+
+          <div
+            class="started-login flex flex-col sm:flex-row gap-4 sm:gap-10 mt-8"
+          >
+            <button
+              class="py-3 px-6 text-lg font-semibold bg-orange-500 text-white rounded-xl"
+            >
+              GET STARTED
+            </button>
+            <button
+              class="py-3 px-6 text-lg font-semibold bg-blue-300 text-white rounded-xl lg:hidden md:px-10"
+            >
+              Login
+            </button>
+          </div>
+
+          <div class="download flex flex-col sm:flex-row gap-4 sm:gap-10 mt-6">
+            <button
+              class="border border-white bg-black rounded-xl flex items-center gap-3 text-white px-4 py-2"
+            >
+              <img
+                src="./src/images/google-play-icon.png"
+                alt="Google Play Icon"
+                class="w-6 h-6"
+              />
+              <div class="text-left">
+                <span class="text-sm block font-light">Available on</span>
+                <span class="text-base font-semibold md:text-sm"
+                  >Google Play</span
+                >
+              </div>
+            </button>
+
+            <button
+              class="border border-white bg-black rounded-xl flex items-center gap-3 text-white px-4 py-2"
+            >
+              <img
+                src="./src/images/apple-play-icon.png"
+                alt="App Store Icon"
+                class="w-6 h-6"
+              />
+              <div class="text-left">
+                <span class="text-sm block font-light">Available on the</span>
+                <span class="text-base font-semibold md:text-sm"
+                  >App Store</span
+                >
+              </div>
+            </button>
+          </div>
+        </div>
+
+        <div
+          class="flex justify-center items-center max-w-xs md:max-w-md lg:max-w-lg"
+          data-aos="fade-left"
+          data-aos-duration="2000"
+        >
+          <img
+            src="./src/images/studentt 1.png"
+            class="w-full h-auto"
+            alt="Student Illustration"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section
+      class="grade-section bg-gradient-to-r from-blue-200 to-orange-100 px-4 py-10 md:px-10"
+    >
+      <div
+        class="flex flex-col md:flex-row items-center w-full md:items-start gap-6"
+      >
+        <!-- Left: Title and Arrow -->
+        <div class="w-1/3 md:w-1/3 text-center md:text-left">
+          <p class="text-3xl md:text-6xl text-black mb-6">Grade Levels</p>
+          <img
+            src="./src/images/grade-arrow.png"
+            alt="Arrow"
+            class="w-full max-w-sm mx-auto md:mx-0"
+          />
+        </div>
+
+        <!-- Right: Grade Cards Grid -->
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full md:w-2/3 mt-15"
+        >
+          <!-- Primary -->
+          <div
+            class="bg-white p-5 flex flex-col items-center md:pb-15"
+            data-aos="fade-up-right"
+            data-aos-duration="1000"
+          >
+            <img
+              src="./public/images/grade-level-1.png"
+              alt="Primary"
+              class="rounded-xl w-full h-auto"
+            />
+            <p class="text-blue-300 font-bold mt-5">Primary</p>
+            <h4 class="text-sm text-left font-semibold text-gray-900 mt-2">
+              Start with the Basics. Create a strong Learning Base and
+              Experience Education Through our Dynamic and Inspiring Medium.
+            </h4>
+          </div>
+
+          <!-- Secondary -->
+          <div
+            class="bg-white p-5 flex flex-col items-center"
+            data-aos="fade-up-right"
+            data-aos-duration="2000"
+          >
+            <img
+              src="./public/images/grade-level-2.png"
+              alt="Secondary"
+              class="rounded-xl w-full h-auto"
+            />
+            <p class="text-blue-300 font-bold mt-5">Secondary</p>
+            <h4 class="text-sm text-left font-semibold text-gray-900 mt-2">
+              Learn the core principles of your discipline and take the first
+              step toward your dream corner and higher education.
+            </h4>
+          </div>
+
+          <!-- Pre-varsity -->
+          <div
+            class="bg-white p-5 flex flex-col items-center"
+            data-aos="fade-up-right"
+            data-aos-duration="3000"
+          >
+            <img
+              src="./public/images/grade-level-3.png"
+              alt="Pre-varsity"
+              class="rounded-xl w-full h-auto"
+            />
+            <p class="text-blue-300 font-bold mt-5">Pre-varsity</p>
+            <h4 class="text-sm text-left font-semibold text-gray-900 mt-2">
+              Build confidence and perform at your best in GCE, S.S.C.E, JAMB,
+              and A-levels.
+            </h4>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      class="bg-[url('/public/landing/mobile-grade-level.png')] min-h-screen md:bg-[url('/public/images/contact-brain.png')] lg:h-screen bg-cover bg-center px-6"
+    >
+      <div class="p-10" data-aos="zoom-in" data-aos-duration="2000">
+        <h2
+          class="text-xl pt-3 text-white font-bold flex md:text-6xl justify-start"
+        >
+          Our Popular Videos
+        </h2>
+
+        <p
+          class="block text-sm text-white font-bold mt-3 md:text-3xl lg:text-2xl"
+        >
+          Watch our Educative videos. Over
+          <span class="text-teal-300"> 10,000 </span>
+          students have watched these.
+        </p>
+      </div>
+
+      <div
+        class="flex gap-3 flex-col flex-wrap md:flex-row px-6 cursor-pointer"
+      >
+        <div
+          class="bg-white p-5 w-[300px] h-[400px]"
+          data-aos="fade-up"
+          data-aos-duration="2000"
+        >
+          <img
+            src="/public/images/video-thumbnail.png"
+            alt="Mathematics Video"
+            class="w-[200px] h-[200px]"
+          />
+
+          <p class="text-lg text-[#0B67B0] font-light mt-2">Mathematics</p>
+
+          <hr class="mt-2 py-1" />
+          <p class="text-sm mt-2 font-light md:text-lg lg:text-lg text-left">
+            Learn the basics. Build a firm foundation and get education through
+            our expressive medium that inspires creativity.
+          </p>
+        </div>
+
+        <div
+          class="bg-white p-5 w-[300px] h-[400px]"
+          data-aos="fade-up"
+          data-aos-duration="2000"
+        >
+          <img
+            src="/public/images/video-thumbnail.png"
+            alt="English Language Video"
+            class="w-[200px] h-[200px]"
+          />
+
+          <p class="text-lg text-[#0B67B0] font-light mt-2">English Language</p>
+
+          <hr class="mt-2 py-1" />
+          <p class="text-sm mt-2 font-light md:text-lg lg:text-lg">
+            Learn about the reason babies don't talk and when they will start
+            exhibiting signs to talk.
+          </p>
+        </div>
+      </div>
+
+      <div>
+        <img
+          src="/public/landing/light-bulb.png"
+          alt=""
+          class="lg:hidden md:hidden"
+        />
+      </div>
+    </section>
+
+    <section
+      class="learn-section p-6 bg-gradient-to-l from-blue-200 to-orange-200 flex flex-col md:flex-row"
+    >
+      <div>
+        <div class="flex text-center flex-col p-6 md:flex-row md:text-left">
+          <div class="flex flex-col gap-6 md:flex-col md:gap-15">
+            <h2
+              class="text-xl font-bold text-orange-700 md:text-5xl font-semi-bold flex-col"
+            >
+              Learn On-The-Go!
+            </h2>
+
+            <h2 class="text-xl font-semibold md:text-6xl">
+              Learn <span class="font-light">Without</span> Boundaries
+            </h2>
+
+            <h4 class="text-lg md:text-2xl mt-0">
+              Personalized learning unleashed
+            </h4>
+          </div>
+
+          <div>
+            <img src="/public/images/laptop-screen.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      class="testimonials-section p-6 flex bg-gradient-to-r from-blue-200 to-orange-200"
+    >
+      <div class="flex flex-col items-center md:block">
+        <h3
+          class="p-6 text-lg mb-30 font-bold text-[#0C598D] text-center md:text-left md:text-6xl w-full"
+        >
+          Testimonials
+        </h3>
+
+        <div
+          class="hidden md:block py-10 relative w-[500px] h-[500px] mx-auto lg:ml-25 md:w-[500px]"
+        >
+          <div
+            class="w-[350px] h-[350px] rounded-full overflow-hidden bg-cyan-500 transform translate-x-[23%] absolute"
+          >
+            <img
+              src="/public/images/testimonial-girl-img.png"
+              alt="Testimonial Girl"
+              class="w-full h-full object-cover absolute"
+            />
+          </div>
+
+          <div
+            class="bg-[#0C2D57] w-50 text-white font-semibold text-xl rounded-xl p-2 md:w-[400px] h-[250px] lg:w-[700px] lg:h-[250px] shadow-lg absolute top-1/2 right-0 transform translate-y-[-70%] md:translate-x-[60%] lg:translate-x-[70%] z-10"
+          >
+            <div
+              class="testimonial-slide testimonial-1 bg-[#0C2D57] text-white font-semibold text-xl rounded-xl p-6 shadow-lg"
+            >
+              <img
+                src="./src/images/icons8-quote-left-64.png"
+                alt="Quote"
+                class="absolute -top-5 left-6 w-8 h-8"
+              />
+
+              <div class="flex space-x-1 mb-4">
+                <img src="./src/images/icons8-star-48.png" class="w-5 h-5" />
+                <img src="./src/images/icons8-star-48.png" class="w-5 h-5" />
+                <img src="./src/images/icons8-star-48.png" class="w-5 h-5" />
+                <img src="./src/images/icons8-star-48.png" class="w-5 h-5" />
+                <img src="./src/images/icons8-star-48.png" class="w-5 h-5" />
+                <img src="./src/images/icons8-star-48.png" class="w-5 h-5" />
+              </div>
+
+              <p class="mb-4">
+                As a parent, I love how Screenclass keeps my kids engaged while
+                learning valuable knowledge. It's education and entertainment
+                combined!
+              </p>
+
+              <h4 class="font-bold">David M.</h4>
+              <p class="text-yellow-400">Parent & Educator</p>
+
+              <img
+                src="./src/images/icons8-quote-left-64.png"
+                alt="Quote"
+                class="absolute -bottom-5 right-6 w-8 h-8 rotate-180"
+              />
+            </div>
+
+            <div
+              class="testimonial-slide testimonial-2 bg-[#0C2D57] text-white font-semibold text-xl rounded-xl p-6 shadow-lg"
+            >
+              <img
+                src="./src/images/icons8-quote-left-64.png"
+                alt="Quote"
+                class="absolute -top-5 left-6 w-8 h-8"
+              />
+
+              <div class="flex space-x-1 mb-4">
+                <img src="./src/images/icons8-star-48.png" class="w-5 h-5" />
+                <img src="./src/images/icons8-star-48.png" class="w-5 h-5" />
+                <img src="./src/images/icons8-star-48.png" class="w-5 h-5" />
+                <img src="./src/images/icons8-star-48.png" class="w-5 h-5" />
+                <img src="./src/images/icons8-star-48.png" class="w-5 h-5" />
+              </div>
+
+              <p class="mb-4">
+                I never thought learning could be this fun! Screenclass makes
+                education excitingwith its gamified approach. Highly
+                recommended!
+              </p>
+
+              <h4 class="font-bold">Sandra A.</h4>
+              <p class="text-yellow-400">University Student</p>
+
+              <img
+                src="./src/images/icons8-quote-left-64.png"
+                alt="Quote"
+                class="absolute -bottom-5 right-6 w-8 h-8 rotate-180"
+              />
+            </div>
+
+            <div
+              class="testimonial-slide testimonial-3 bg-[#0C2D57] text-white font-semibold text-xl rounded-xl p-6 shadow-lg"
+            >
+              <img
+                src="./src/images/icons8-quote-left-64.png"
+                alt="Quote"
+                class="absolute -top-5 left-6 w-8 h-8"
+              />
+
+              <div class="flex space-x-1 mb-4">
+                <img src="./src/images/icons8-star-48.png" class="w-5 h-5" />
+                <img src="./src/images/icons8-star-48.png" class="w-5 h-5" />
+                <img src="./src/images/icons8-star-48.png" class="w-5 h-5" />
+                <img src="./src/images/icons8-star-48.png" class="w-5 h-5" />
+                <img src="./src/images/icons8-star-48.png" class="w-5 h-5" />
+                <img src="./src/images/icons8-star-48.png" class="w-5 h-5" />
+              </div>
+
+              <p class="mb-4">
+                Screenclass has completely transformed the way I learn. The
+                interactive quizzes and engaging lessons keep me motivated every
+                day!
+              </p>
+
+              <h4 class="font-bold">Michael O.</h4>
+              <p class="text-yellow-400">High school Teacher</p>
+
+              <img
+                src="./src/images/icons8-quote-left-64.png"
+                alt="Quote"
+                class="absolute -bottom-5 right-6 w-8 h-8 rotate-180"
+              />
+            </div>
+
+            <div
+              class="testimonial-slide testimonial-4 bg-[#0C2D57] text-white font-semibold text-xl rounded-xl p-6 shadow-lg"
+            >
+              <img
+                src="./src/images/icons8-quote-left-64.png"
+                alt="Quote"
+                class="absolute -top-5 left-6 w-8 h-8"
+              />
+
+              <div class="flex space-x-1 mb-4">
+                <img src="./src/images/icons8-star-48.png" class="w-5 h-5" />
+                <img src="./src/images/icons8-star-48.png" class="w-5 h-5" />
+                <img src="./src/images/icons8-star-48.png" class="w-5 h-5" />
+                <img src="./src/images/icons8-star-48.png" class="w-5 h-5" />
+                <img src="./src/images/icons8-star-48.png" class="w-5 h-5" />
+                <img src="./src/images/icons8-star-48.png" class="w-5 h-5" />
+              </div>
+
+              <p class="mb-4">
+                This is the best educational platform I've used! The variety of
+                content and interactive style make Screenclass stand out from
+                the rest.
+              </p>
+
+              <h4 class="font-bold">Femi A.</h4>
+              <p class="text-yellow-400">E-learning Consultant</p>
+
+              <img
+                src="./src/images/icons8-quote-left-64.png"
+                alt="Quote"
+                class="absolute -bottom-5 right-6 w-8 h-8 rotate-180"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- Mobile View -->
+        <div class="block md:hidden relative w-full">
+          <div class="relative w-full flex justify-center">
+            <img
+              src="/public/images/testimonial.png"
+              alt="Testimonial"
+              class="w-40 h-40 mt-20 relative"
+            />
+          </div>
+
+          <div
+            class="p-6 w-96 h-70 max-w-[320px] top-0 right-0 transform translate-y-[-45%] translate-x-[70%] absolute"
+          >
+            <div
+              class="testimonial-slide testimonial-1 bg-[#0C2D57] text-white font-semibold text-sm rounded-xl p-6 shadow-lg relative"
+            >
+              <img
+                src="./src/images/icons8-quote-left-64.png"
+                alt="Quote"
+                class="absolute -top-5 left-6 w-8 h-8"
+              />
+
+              <div class="flex space-x-1 mb-4">
+                <img src="./src/images/icons8-star-48.png" class="w-5 h-5" />
+                <img src="./src/images/icons8-star-48.png" class="w-5 h-5" />
+                <img src="./src/images/icons8-star-48.png" class="w-5 h-5" />
+                <img src="./src/images/icons8-star-48.png" class="w-5 h-5" />
+                <img src="./src/images/icons8-star-48.png" class="w-5 h-5" />
+                <img src="./src/images/icons8-star-48.png" class="w-5 h-5" />
+              </div>
+
+              <p class="mb-4">
+                As a parent, I love how Screenclass keeps my kids engaged while
+                learning valuable knowledge. It's education and entertainment
+                combined!
+              </p>
+
+              <h4 class="font-bold">David M.</h4>
+              <p class="text-yellow-400">Parent & Educator</p>
+
+              <img
+                src="./src/images/icons8-quote-left-64.png"
+                alt="Quote"
+                class="absolute -bottom-5 right-6 w-8 h-8 rotate-180"
+              />
+            </div>
+
+            <div
+              class="testimonial-slide testimonial-2 bg-[#0C2D57] text-white font-semibold text-xl rounded-xl p-6 shadow-lg"
+            >
+              <img
+                src="./src/images/icons8-quote-left-64.png"
+                alt="Quote"
+                class="absolute -top-5 left-6 w-8 h-8"
+              />
+
+              <div class="flex space-x-1 mb-4">
+                <img src="./src/images/icons8-star-48.png" class="w-5 h-5" />
+                <img src="./src/images/icons8-star-48.png" class="w-5 h-5" />
+                <img src="./src/images/icons8-star-48.png" class="w-5 h-5" />
+                <img src="./src/images/icons8-star-48.png" class="w-5 h-5" />
+                <img src="./src/images/icons8-star-48.png" class="w-5 h-5" />
+              </div>
+
+              <p class="mb-4">
+                I never thought learning could be this fun! Screenclass makes
+                education excitingwith its gamified approach. Highly
+                recommended!
+              </p>
+
+              <h4 class="font-bold">Sandra A.</h4>
+              <p class="text-yellow-400">University Student</p>
+
+              <img
+                src="./src/images/icons8-quote-left-64.png"
+                alt="Quote"
+                class="absolute -bottom-5 right-6 w-8 h-8 rotate-180"
+              />
+            </div>
+
+            <div
+              class="testimonial-slide testimonial-3 bg-[#0C2D57] text-white font-semibold text-xl rounded-xl p-6 shadow-lg"
+            >
+              <img
+                src="./src/images/icons8-quote-left-64.png"
+                alt="Quote"
+                class="absolute -top-5 left-6 w-8 h-8"
+              />
+
+              <div class="flex space-x-1 mb-4">
+                <img src="./src/images/icons8-star-48.png" class="w-5 h-5" />
+                <img src="./src/images/icons8-star-48.png" class="w-5 h-5" />
+                <img src="./src/images/icons8-star-48.png" class="w-5 h-5" />
+                <img src="./src/images/icons8-star-48.png" class="w-5 h-5" />
+                <img src="./src/images/icons8-star-48.png" class="w-5 h-5" />
+                <img src="./src/images/icons8-star-48.png" class="w-5 h-5" />
+              </div>
+
+              <p class="mb-4">
+                Screenclass has completely transformed the way I learn. The
+                interactive quizzes and engaging lessons keep me motivated every
+                day!
+              </p>
+
+              <h4 class="font-bold">Michael O.</h4>
+              <p class="text-yellow-400">High school Teacher</p>
+
+              <img
+                src="./src/images/icons8-quote-left-64.png"
+                alt="Quote"
+                class="absolute -bottom-5 right-6 w-8 h-8 rotate-180"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      class="features-section bg-gradient-to-r from-orange-200 to-blue-200 py-12 px-4"
+    >
+      <div class="max-w-7xl mx-auto">
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-10">
+          <span class="text-[#0B67B0]">Screenclass</span> Features
+        </h2>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div
+            class="bg-white p-4 rounded-lg shadow-md flex flex-col h-full"
+            data-aos="fade-up"
+            data-aos-duration="1000s"
+          >
+            <div
+              class="relative w-full h-48 sm:h-56 mb-4 rounded-md overflow-hidden"
+            >
+              <img
+                src="/public/landing/features-one.png"
+                alt="CBT Solutions"
+                class="w-full h-full object-cover"
+              />
+              <img
+                src="/public/images/new-feature-tag.png"
+                alt="New Feature"
+                class="absolute top-0 left-0 w-16 h-16 sm:w-20 sm:h-20"
+              />
+            </div>
+            <p class="text-[#0B67B0] text-lg font-semibold">CBT SOLUTIONS</p>
+            <hr class="my-4 bg-gray-300" />
+            <p class="text-sm text-gray-700">
+              Smooth, effective, and engaging evaluations. Our platform offers
+              an intuitive and easy-to-use interface.
+            </p>
+          </div>
+
+          <div
+            class="bg-white p-4 rounded-lg shadow-md flex flex-col h-full"
+            data-aos="fade-up"
+            data-aos-duration="2000s"
+          >
+            <div
+              class="relative w-full h-48 sm:h-56 mb-4 rounded-md overflow-hidden"
+            >
+              <img
+                src="/public/landing/features-two.png"
+                alt="EDU-Video Solutions"
+                class="w-full h-full object-cover"
+              />
+              <img
+                src="/public/images/new-feature-tag.png"
+                alt="New Feature"
+                class="absolute top-0 left-0 w-16 h-16 sm:w-20 sm:h-20"
+              />
+            </div>
+            <p class="text-[#0B67B0] text-lg font-semibold">
+              EDU–VIDEO SOLUTIONS
+            </p>
+            <hr class="my-4 bg-gray-300" />
+            <p class="text-sm text-gray-700">
+              A dynamic learning experience with engaging, high-quality videos
+              that simplify complex topics and make learning fun.
+            </p>
+          </div>
+
+          <div
+            class="bg-white p-4 rounded-lg shadow-md flex flex-col h-full"
+            data-aos="fade-up"
+            data-aos-duration="2000s"
+          >
+            <div
+              class="relative w-full h-48 sm:h-56 mb-4 rounded-md overflow-hidden"
+            >
+              <img
+                src="/public/images/features-img.png"
+                alt="Exams Solutions"
+                class="w-full h-full object-cover"
+              />
+              <img
+                src="/public/images/coming-soon-tag.png"
+                alt="Coming Soon"
+                class="absolute top-0 left-0 w-16 h-16 sm:w-20 sm:h-20"
+              />
+            </div>
+            <p class="text-[#0B67B0] text-lg font-semibold">EXAMS SOLUTIONS</p>
+            <hr class="my-4 bg-gray-300" />
+            <p class="text-sm text-gray-700">
+              High-quality exam solutions, interactive practice tests, and
+              detailed explanations designed to help you excel in every subject.
+            </p>
+          </div>
+
+          <div
+            class="bg-white p-4 rounded-lg shadow-md flex flex-col h-full"
+            data-aos="fade-up"
+            data-aos-duration="3000s"
+          >
+            <div
+              class="relative w-full h-48 sm:h-56 mb-4 rounded-md overflow-hidden"
+            >
+              <img
+                src="/public/landing/features-four.png"
+                alt="Gaming Solutions"
+                class="w-full h-full object-cover"
+              />
+              <img
+                src="/public/images/coming-soon-tag.png"
+                alt="Coming Soon"
+                class="absolute top-0 left-0 w-16 h-16 sm:w-20 sm:h-20"
+              />
+            </div>
+            <p class="text-[#0B67B0] text-lg font-semibold">GAMING SOLUTIONS</p>
+            <hr class="my-4 bg-gray-300" />
+            <p class="text-sm text-gray-700">
+              Transform learning with interactive games, engaging quizzes, and
+              challenge-driven lessons that make education fun and effective.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="video-section">
+      <div class="video">
+        <img src="/public/images/video_thumbnail.png" alt="" />
+      </div>
+    </section>
+
+    <section>
+      <div class="flex justify-center gap-4 p-4 bg-white overflow-hidden">
+        <div class="flex w-[200%] animate-logo-slide gap-10">
+          <!-- MyEDUGAMES -->
+          <a href="http://myedugames.com/" target="_blank">
+            <div
+              class="bg-white rounded-xl shadow-sm p-4 w-32 h-32 flex items-center justify-center lg:w-60 lg:h-50"
+            >
+              <img
+                src="/public/landing/edu-games-icon.svg"
+                alt="my-edu-games"
+                class="max-h-16"
+              />
+            </div>
+          </a>
+
+          <!-- Get2Know -->
+          <a href="https://get-2-know.com/" target="_blank">
+            <div
+              class="bg-teal-900 rounded-xl shadow-sm p-4 w-32 h-32 flex items-center justify-center lg:w-60 lg:h-50"
+            >
+              <img
+                src="/public/landing/get-2-know-icon.png"
+                alt="Get2Know"
+                class="max-h-16"
+              />
+            </div>
+          </a>
+
+          <!-- BrainBuilder -->
+          <a href="#">
+            <div
+              class="bg-white rounded-xl shadow-sm p-4 w-32 h-32 flex items-center justify-center lg:w-60 lg:h-50"
+            >
+              <img
+                src="/public/landing/brainbuilder-icon.png"
+                alt="brain-builder"
+                class="max-h-16"
+              />
+            </div>
+          </a>
+
+          <!-- Screenclass -->
+          <a href="#">
+            <div
+              class="bg-white rounded-xl shadow-sm p-4 w-32 h-32 flex items-center justify-center lg:w-60 lg:h-50"
+            >
+              <img
+                src="/public/landing/screenclass-logo.png"
+                alt="screenclass-logo"
+                class="max-h-16"
+              />
+            </div>
+          </a>
+
+          <!-- ExamPrimed -->
+          <a href="https://examprimed.com/" target="_blank">
+            <div
+              class="bg-teal-600 rounded-xl shadow-sm p-4 w-32 h-32 flex items-center justify-center lg:w-60 lg:h-50"
+            >
+              <img
+                src="/public/landing/exam-prime-logo.svg"
+                alt="exam-prime"
+                class="max-h-16"
+              />
+            </div>
+          </a>
+
+          <!--DUPLICATE  -->
+          <!-- MyEDUGAMES -->
+          <a href="http://myedugames.com/" target="_blank">
+            <div
+              class="bg-white rounded-xl shadow-sm p-4 w-32 h-32 flex items-center justify-center lg:w-60 lg:h-50"
+            >
+              <img
+                src="/public/landing/edu-games-icon.svg"
+                alt="my-edu-games"
+                class="max-h-16"
+              />
+            </div>
+          </a>
+
+          <!-- Get2Know -->
+          <a href="https://get-2-know.com/" target="_blank">
+            <div
+              class="bg-teal-900 rounded-xl shadow-sm p-4 w-32 h-32 flex items-center justify-center lg:w-60 lg:h-50"
+            >
+              <img
+                src="/public/landing/get-2-know-icon.png"
+                alt="Get2Know"
+                class="max-h-16"
+              />
+            </div>
+          </a>
+
+          <!-- BrainBuilder -->
+          <a href="">
+            <div
+              class="bg-white rounded-xl shadow-sm p-4 w-32 h-32 flex items-center justify-center lg:w-60 lg:h-50"
+            >
+              <img
+                src="/public/landing/brainbuilder-icon.png"
+                alt="brain-builder"
+                class="max-h-16 object-contain"
+              />
+            </div>
+          </a>
+
+          <!-- Screenclass -->
+          <a href="#">
+            <div
+              class="bg-white rounded-xl shadow-sm p-4 w-32 h-32 flex items-center justify-center lg:w-60 lg:h-50"
+            >
+              <img
+                src="/public/landing/screenclass-logo.png"
+                alt="screenclass-logo"
+                class="max-h-16 object-contain"
+              />
+            </div>
+          </a>
+
+          <!-- ExamPrimed -->
+          <a href="https://examprimed.com/" target="_blank">
+            <div
+              class="bg-teal-600 rounded-xl shadow-sm p-4 w-32 h-32 flex items-center justify-center lg:w-60 lg:h-50"
+            >
+              <img
+                src="/public/landing/exam-prime-logo.svg"
+                alt="exam-prime"
+                class="max-h-16"
+              />
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section
+      class="partners-section bg-gradient-to-r from-blue-100 to-orange-100"
+    >
+      <h1 class="flex justify-center items-center py-10 text-5xl font-bold">
+        OUR PARTNERS
+      </h1>
+
+      <div class="overflow-x-auto w-full">
+        <div class="flex gap-10 p-6">
+          <div
+            id="partnerCarousel"
+            class="flex items-center justify-center gap-10"
+          >
+            <div
+              id="partner-0"
+              class="partner-card bg-green-800 rounded-xl shadow-sm p-4 w-50 h-70 flex items-center"
+            >
+              <img src="/public/images/9mobile.svg" alt="9mobile" />
+            </div>
+
+            <div
+              id="partner-1"
+              class="partner-card bg-white rounded-xl shadow-sm p-4 w-50 h-70 flex items-center transition-all duration-500 ease-in-out"
+            >
+              <img src="/public/images/Airtel.svg" alt="Airtel" />
+            </div>
+
+            <div
+              id="partner-2"
+              class="partner-card bg-yellow-400 rounded-xl shadow-sm p-4 w-50 h-70 flex items-center transition-all duration-500 ease-in-out"
+            >
+              <img src="/public/images/Mtn.svg" alt="MTN" />
+            </div>
+
+            <div
+              id="partner-3"
+              class="partner-card bg-white rounded-xl shadow-sm p-4 w-50 h-70 flex items-center transition-all duration-500 ease-in-out"
+            >
+              <img src="/public/images/Martad logo.png" alt="Martad" />
+            </div>
+
+            <div
+              id="partner-4"
+              class="partner-card bg-[#0B67B0] rounded-xl shadow-sm p-4 w-50 h-70 flex items-center transition-all duration-500 ease-in-out"
+            >
+              <img src="/public/images/screenClass.png" alt="Screenclass" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h2 class="flex justify-center text-xl p-6 font-semibold md:text-3xl">
+        Trusted by <span class="text-orange-400 mx-2"> 100+ </span>Top Companies
+      </h2>
+    </section>
+
+    <section>
+      <footer
+        class="footer-mobile flex justify-between bg-[#0B67B0] h-90 p-3 lg:hidden"
+      >
+        <div class="left flex flex-col justify-between text-base text-white">
+          <div class="w-25">
+            <img src="/public/images/screenclass-logo-white.png" />
+          </div>
+
+          <p class="w-40 py-5">
+            A product of Martad Education & Skills Development LTD.
+          </p>
+
+          <p class="w-45 py-5">
+            3B, Alegbe Close, Mende Marylamd, Lagos, Nigeria
+          </p>
+
+          <div>
+            <p class="py-3 font-bold">CONTACT US</p>
+            <p>+234 704 330 3000</p>
+            <p>+234 809 293 3330</p>
+            <p>info@screenclass.com</p>
+          </div>
+        </div>
+
+        <div class="right flex flex-col flex-end text-base text-white">
+          <div class="my-10">
+            <p class="font-bold">EXPLORE</p>
+            <p>About Us</p>
+            <p>Contact</p>
+            <p>FAQs</p>
+          </div>
+
+          <div>
+            <p class="font-bold">FEATURES</p>
+            <p>Primary</p>
+            <p>Secondary</p>
+            <p>Pre-varsity</p>
+          </div>
+        </div>
+        <hr />
+      </footer>
+
+      <footer
+        class="hidden lg:grid lg:grid-cols-3 footer-desktop justify-between bg-[#0B67B0] h-auto p-6"
+      >
+        <div class="text-white text-lg">
+          <div class="w-50">
+            <img src="/public/images/screenclass-logo-white.png" />
+          </div>
+
+          <p class="w-69 py-5 font-semibold">
+            A product of Martad Education & Skills Development LTD.
+          </p>
+
+          <p class="w-75 py-5 font-semibold">
+            3B, Alegbe Close, Mende Maryland, Lagos, Nigeria
+          </p>
+        </div>
+
+        <div
+          class="grid grid-cols-3 gap-15 text-base text-white w-[600px] mt-15"
+        >
+          <div>
+            <p class="font-bold">EXPLORE</p>
+            <p>About Us</p>
+            <p>Contact</p>
+            <p>FAQs</p>
+          </div>
+
+          <div>
+            <p class="font-bold">CONTACT US</p>
+            <p>+234 704 330 3000</p>
+            <p>+234 809 293 3330</p>
+            <p>info@screenclass.com</p>
+          </div>
+
+          <div>
+            <p class="font-bold">FEATURES</p>
+            <p>Primary</p>
+            <p>Secondary</p>
+            <p>Pre-varsity</p>
+          </div>
+        </div>
+      </footer>
+      <hr class="border-white" />
+      <div
+        class="bg-[#0B67B0] flex justify-center items-center text-white text-small font-semibold py-4"
+      >
+        &copy; 2025 Screenclass. All Rights Reserved.
+      </div>
+    </section>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>

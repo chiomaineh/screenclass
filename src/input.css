@@ -1,0 +1,68 @@
+@import "tailwindcss";
+
+.bg-scrolled {
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes fadeInOut {
+  0%, 100% {
+    opacity: 0;
+  }
+  10%, 30% {
+    opacity: 1;
+  }
+  40%, 100% {
+    opacity: 0;
+  }
+}
+
+.testimonial-slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  animation: fadeInOut 9s infinite;
+}
+
+.testimonial-1 {
+  animation-delay: 0s;
+}
+
+.testimonial-2 {
+  animation-delay: 3s;
+}
+
+.testimonial-3 {
+  animation-delay: 6s;
+}
+
+.testimonial-4 {
+  animation-delay: 6s;
+}
+
+@keyframes slideLogos {
+  0% {
+    transform: translateX(0);
+  }
+  10% {
+    transform: translateX(0); /* Hold position */
+  }
+  45% {
+    transform: translateX(-20%);
+  }
+  55% {
+    transform: translateX(-50%); /* Hold second set */
+  }
+  100% {
+    transform: translateX(0); /* Back to start */
+  }
+}
+
+.animate-logo-slide {
+  animation: slideLogos 10s infinite ease-in-out;
+}
+
+#menu-bar {
+  width: 50px;
+  height:50px;
+}
