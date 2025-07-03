@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+body {
+  overflow-x: hidden;
+}
+
 .bg-scrolled {
   background-color: white;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -63,6 +67,7 @@
 }
 
 #menu-bar {
-  width: 50px;
-  height:50px;
+  width: 60px;
+  height:60px;
+  
 }

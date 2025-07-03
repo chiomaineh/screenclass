@@ -12,6 +12,10 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
 
     <link
       rel="shortcut icon"
@@ -29,14 +33,14 @@
       style="background-image: url('./src/images/bg-header.jpg')"
     >
       <header
-        class="header w-full flex justify-between items-center bg-transparent transition-all duration-300 absolute top-0 left-0 px-4 py-2 z-50"
+        class="header w-full flex justify-between items-center bg-transparent transition-all duration-200 absolute top-0 left-0 px-4 py-2 z-50"
       >
         <nav class="flex justify-between w-full">
           <img
             id="headerLogo"
             src="./src/images/screenclass-logo-white.png"
             alt="screenclass logo"
-            class="w-40 h-auto"
+            class="w-auto h-auto"
           />
 
           <ul
@@ -184,13 +188,13 @@
             id="menu-bar"
             src="./src/images/menu.png"
             alt=""
-            class="block lg:hidden w-8 h-8 cursor-pointer"
+            class="lg:hidden w-8 h-8 cursor-pointer"
           />
 
           <div class="log-in w-60 hidden lg:flex gap-6 justify-between">
             <button
               id="sign-up"
-              class=" w-30 text-base p-2 border-solid border-orange-300 rounded-full text-white border-1 font-semibold cursor-pointer"
+              class="w-30 text-base p-2 border-solid border-orange-300 rounded-full text-white border-1 font-semibold cursor-pointer"
             >
               Sign Up
             </button>
@@ -251,6 +255,69 @@
               </div>
             </div>
           </div>
+        </nav>
+
+        <nav
+          id="mobile-nav"
+          class="flex flex-col gap-6 text-black text-lg font-bold items-center bg-white py-6 w-1/2 absolute top-full right-0 z-40 lg:hidden transition-all duration-400 ease-in-out"
+        >
+          <ul
+            class="list-none flex flex-col text-black font-semibold gap-4 w-full px-4"
+          >
+            <li>Home</li>
+
+            <li
+              id="classesBtn"
+              class="cursor-pointer flex w-full justify-between items-center"
+            >
+              Classes
+              <svg
+                class="-mr-1 size-5 mt-1"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </li>
+            <ul id="classesMenu" class="flex-col gap-2 pl-4 hidden">
+              <li><a href="#">Primary</a></li>
+              <li><a href="#">Secondary</a></li>
+              <li><a href="#">Pre-Varsity</a></li>
+            </ul>
+
+            <li>Pricing</li>
+            <li>Contact Us</li>
+
+            <li
+              id="menuBtn"
+              class="cursor-pointer flex w-full justify-between items-center"
+            >
+              More
+              <svg
+                class="-mr-1 size-5 mt-1"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </li>
+            <ul id="menuOptions" class="flex-col gap-2 pl-4 hidden">
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">FAQs</a></li>
+              <li><a href="#">Policy</a></li>
+              <li><a href="#">Terms & Conditions</a></li>
+            </ul>
+          </ul>
         </nav>
       </header>
 
@@ -795,7 +862,7 @@
     <section
       class="features-section bg-gradient-to-r from-orange-200 to-blue-200 py-12 px-4"
     >
-      <div class="max-w-7xl mx-auto">
+      <div class="max-w-7xl mx-auto cursor-pointer">
         <h2 class="text-3xl md:text-4xl font-bold text-center mb-10">
           <span class="text-[#0B67B0]">Screenclass</span> Features
         </h2>
@@ -920,6 +987,7 @@
       </div>
     </section>
 
+    <!-- for partners -->
     <section>
       <div class="flex justify-center gap-4 p-4 bg-white overflow-hidden">
         <div class="flex w-[200%] animate-logo-slide gap-10">
@@ -1057,7 +1125,8 @@
       </div>
     </section>
 
-    <section
+    <!--start of partner  -->
+    <!-- <section
       class="partners-section bg-gradient-to-r from-blue-100 to-orange-100"
     >
       <h1 class="flex justify-center items-center py-10 text-5xl font-bold">
@@ -1111,6 +1180,52 @@
       <h2 class="flex justify-center text-xl p-6 font-semibold md:text-3xl">
         Trusted by <span class="text-orange-400 mx-2"> 100+ </span>Top Companies
       </h2>
+    </section> -->
+    <section class="bg-gradient-to-r from-blue-100 to-orange-100">
+      <h1 class="flex justify-center items-center py-10 text-5xl font-bold">
+        OUR PARTNERS
+      </h1>
+      <div class="swiper-container w-[300px] mx-auto p-6">
+        <div class="swiper-wrapper">
+          <div
+            class="swiper-slide partner-card bg-green-800 rounded-xl shadow-sm p-4 flex items-center justify-center"
+          >
+            <img src="/public/images/9mobile.svg" alt="9mobile" class="h-70 object-contain" /> 
+          </div>
+          <div
+            class="swiper-slide partner-card bg-white rounded-xl shadow-sm p-4 w-50 h-70 flex items-center justify-center"
+          >
+            <img src="/public/images/Airtel.svg" alt="Airtel" class="h-70 object-contain" />
+          </div>
+          <div
+            class="swiper-slide partner-card bg-yellow-400 rounded-xl shadow-sm p-4 w-50 h-70 flex items-center justify-center"
+          >
+            <img src="/public/images/Mtn.svg" alt="MTN" class="h-70 object-contain" />
+          </div>
+          <div
+            class="swiper-slide partner-card bg-white rounded-xl shadow-sm p-4 w-50 h-70 flex items-center justify-center"
+          >
+            <img
+              src="/public/images/Martad logo.png"
+              alt="Martad"
+              class="h-70 object-contain"
+            />
+          </div>
+          <div
+            class="swiper-slide partner-card bg-[#0B67B0] rounded-xl shadow-sm p-4 w-50 h-70 flex items-center justify-center"
+          >
+            <img
+              src="/public/images/screenClass.png"
+              alt="Screenclass"
+              class="h-70 object-contain"
+            />
+          </div>
+        </div>
+      </div>
+
+      <h2 class="flex justify-center text-xl p-6 font-semibold md:text-3xl">
+        Trusted by <span class="text-orange-400 mx-2">100+</span> Top Companies
+      </h2>
     </section>
 
     <section>
@@ -1126,9 +1241,7 @@
             A product of Martad Education & Skills Development LTD.
           </p>
 
-          <p class="w-45">
-            3B, Alegbe Close, Mende Marylamd, Lagos, Nigeria
-          </p>
+          <p class="w-45">3B, Alegbe Close, Mende Marylamd, Lagos, Nigeria</p>
 
           <div>
             <p class="py-2 font-bold">CONTACT US</p>
@@ -1174,27 +1287,27 @@
         </div>
 
         <div
-          class="grid grid-cols-3 gap-15 text-base text-white w-[600px] mt-15"
+          class="flex justify-between gap-15 text-base text-white w-[600px] mt-15 ml-[300px]"
         >
           <div>
             <p class="font-bold">EXPLORE</p>
-            <p>About Us</p>
-            <p>Contact</p>
-            <p>FAQs</p>
+            <p class="font-semibold">About Us</p>
+            <p class="font-semibold">Contact</p>
+            <p class="font-semibold">FAQs</p>
           </div>
 
           <div>
             <p class="font-bold">CONTACT US</p>
-            <p>+234 704 330 3000</p>
-            <p>+234 809 293 3330</p>
-            <p>info@screenclass.com</p>
+            <p class="font-semibold">+234 704 330 3000</p>
+            <p class="font-semibold">+234 809 293 3330</p>
+            <p class="font-semibold">info@screenclass.com</p>
           </div>
 
           <div>
             <p class="font-bold">FEATURES</p>
-            <p>Primary</p>
-            <p>Secondary</p>
-            <p>Pre-varsity</p>
+            <p class="font-semibold">Primary</p>
+            <p class="font-semibold">Secondary</p>
+            <p class="font-semibold">Pre-varsity</p>
           </div>
         </div>
       </footer>
@@ -1208,6 +1321,29 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
       AOS.init();
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+      const swiper = new Swiper(".swiper-container", {
+        effect: "coverflow",
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: "auto",
+        loop: true,
+        autoplay: {
+          delay: 2000,
+          disableOnInteraction: false,
+        },
+        coverflowEffect: {
+          rotate: 0,
+          stretch: -80,
+          depth: 300,
+          modifier: 3,
+          slideShadows: true,
+          
+        },
+        spaceBetween: 100,
+      });
     </script>
   </body>
 </html>
